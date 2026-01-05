@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conferência de Produtos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg-main: radial-gradient(circle at top, #111827 0%, #020617 40%, #000 100%);
+            --card-bg: rgba(15, 23, 42, 0.96);
+            --card-border: rgba(148, 163, 184, 0.3);
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+            --accent: #22c55e;
+            --accent-2: #16a34a;
+            --danger: #ef4444;
+            --field-bg: #111827;
+            --field-border: rgba(55, 65, 81, 0.9);
+            --radius-card: 20px;
+            --radius-inner: 14px;
+            --shadow-card: 0 26px 60px rgba(0,0,0,0.88);
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: var(--bg-main);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0 0 24px;
+            min-height: 100vh;
+        }
+
+        .bg-decor {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .glow-1,
+        .glow-2 {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 999px;
+            filter: blur(140px);
+            opacity: 0.26;
+        }
+
+        .glow-1 {
+            top: -100px;
+            right: -80px;
+            background: #22c55e;
+        }
+
+        .glow-2 {
+            bottom: -140px;
+            left: -40px;
+            background: #1d4ed8;
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            padding: 10px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .header span.loja {
+            font-weight: 600;
+        }
+
+        .header-chip {
+            padding: 3px 8px;
+            border-radius: 999px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            color: var(--text-muted);
+            background: rgba(15, 23, 42, 0.9);
+        }
+
+        .header-login-btn {
+            padding: 5px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.6);
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(15,23,42,0.9);
+        }
+
+        @media (hover:hover) {
+            .header-login-btn:hover {
+                border-color: rgba(34,197,94,0.7);
+                color: #bbf7d0;
+            }
+        }
+
+        .shell {
+            max-width: 1080px;
+            margin: 16px auto 0;
+            padding: 0 12px;
+        }
+
+        .container {
+            background: var(--card-bg);
+            border-radius: var(--radius-card);
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow-card);
+            backdrop-filter: blur(26px);
+            -webkit-backdrop-filter: blur(26px);
+            padding: 18px 14px 16px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 24px 24px 20px;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin: 2px 0 12px;
+            font-weight: 500;
+            font-size: 1.35rem;
+            letter-spacing: 0.02em;
+        }
+
+        h2, h3 {
+            margin: 0 0 10px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        section + section {
+            margin-top: 18px;
+        }
+
+        .section-grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        @media (min-width: 768px) {
+            .section-grid {
+                grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+            }
+        }
+
+        .card-section {
+            background: rgba(15, 23, 42, 0.98);
+            border-radius: var(--radius-inner);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            padding: 14px 12px 14px;
+        }
+
+        @media (min-width: 768px) {
+            .card-section {
+                padding: 16px 18px 14px;
+            }
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .card-header span.icon {
+            font-size: 17px;
+        }
+
+        .card-subtitle {
+            margin: 0 0 8px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        input[type="file"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--field-border);
+            margin: 6px 0 10px;
+            background-color: var(--field-bg);
+            color: var(--text-main);
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        input[type="file"]:focus,
+        input[type="text"]:focus,
+        select:focus {
+            background-color: #020617;
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.45);
+        }
+
+        select {
+            background-image: linear-gradient(45deg, transparent 50%, #9ca3af 50%),
+                              linear-gradient(135deg, #9ca3af 50%, transparent 50%);
+            background-position: calc(100% - 14px) calc(50% - 3px),
+                                 calc(100% - 10px) calc(50% - 3px);
+            background-size: 6px 6px, 6px 6px;
+            background-repeat: no-repeat;
+            appearance: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 11px 12px;
+            position: relative;
+            margin-top: 6px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border: none;
+            border-radius: 999px;
+            color: #020617;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            background-size: 200% auto;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            box-shadow: 0 14px 28px rgba(34, 197, 94, 0.3);
+        }
+
+        @media (hover:hover) {
+            button:hover {
+                background-position: right center;
+                transform: translateY(-1px);
+                box-shadow: 0 18px 40px rgba(34, 197, 94, 0.45);
+            }
+        }
+
+        .botao-apagar {
+            background: linear-gradient(135deg, var(--danger), #b91c1c);
+            color: #fef2f2;
+            box-shadow: 0 14px 28px rgba(239, 68, 68, 0.3);
+        }
+
+        .filter-section label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+
+        /* --- TABELA --- */
+        .table-wrapper {
+            margin-top: 10px;
+            border-radius: 12px;
+            border: 1px solid #1f2937;
+            overflow-x: auto;
+            overflow-y: visible;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            min-width: 480px;
+        }
+
+        th, td {
+            padding: 8px 6px;
+            text-align: center;
+            background-color: #020617;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        th {
+            background: linear-gradient(90deg, #1d4ed8, #2563eb);
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            font-weight: 500;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            th, td {
+                padding: 6px 4px;
+                font-size: 11px;
+            }
+        }
+
+        .linha-ok td {
+            background-color: #14532d;
+            color: #ecfdf5;
+        }
+
+        .linha-faltando td {
+            background-color: #7f1d1d;
+            color: #fef2f2;
+        }
+
+        .linha-sobrando td {
+            background-color: #78350f;
+            color: #fefce8;
+        }
+
+        .status-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            background: rgba(15, 23, 42, 0.92);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+        }
+
+        .dot-ok { background: #22c55e; }
+        .dot-faltando { background: #ef4444; }
+        .dot-sobrando { background: #facc15; }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .dropbtn {
+            width: 100%;
+            background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+            color: #e5f0ff;
+            padding: 11px 12px;
+            font-size: 14px;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #020617;
+            min-width: 100%;
+            border-radius: 14px;
+            z-index: 20;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            margin-top: 6px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: #e5e7eb;
+            padding: 10px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 13px;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-content a + a {
+            border-top: 1px solid rgba(31, 41, 55, 0.9);
+        }
+
+        .dropdown-content a:hover {
+            background-color: #111827;
+        }
+
+        /* hover abre no desktop */
+        @media (hover:hover) {
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        }
+
+        /* classe open (click/touch) */
+        .dropdown.open .dropdown-content {
+            display: block;
+        }
+
+        #mensagem {
+            margin-top: 8px;
+            padding: 10px 11px;
+            border-radius: 10px;
+            background: #020617;
+            font-size: 13px;
+            white-space: pre-line;
+            border: 1px solid rgba(55, 65, 81, 0.8);
+        }
+
+        button.loading::after {
+            content: "";
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            border: 3px solid rgba(255, 255, 255, 0.35);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: translateY(-50%) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-decor">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <span>🏪 Loja:</span>
+                <span class="loja">{{ nome_loja | capitalize }}</span>
+                <span class="header-chip">Conferência</span>
+            </div>
+            <a href="/login" class="header-login-btn">← Login</a>
+        </div>
+    </header>
+
+    <div class="shell">
+        <div class="container">
+            <h1>Conferência de Produtos</h1>
+
+            <div class="section-grid">
+                <!-- Importar planilha -->
+                <section class="card-section">
+                    <div class="card-header">
+                        <h2><span class="icon">📅</span> Importar planilha</h2>
+                    </div>
+                    <p class="card-subtitle">
+                        Envie a planilha com a listagem de produtos para iniciar a conferência.
+                    </p>
+                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                        <input type="file" name="planilha" accept=".xlsx,.xls,.csv,.xml,.pdf" required>
+                        <button type="submit">Importar planilha</button>
+                    </form>
+                </section>
+
+                <!-- Busca manual + filtro -->
+                <section class="card-section">
+                    <div class="card-header">
+                        <h2><span class="icon">🔎</span> Buscar código manual</h2>
+                    </div>
+                    <p class="card-subtitle">
+                        Digite o código ou nome do produto para bipar manualmente.
+                    </p>
+
+                    <input type="text" id="codigo-manual" placeholder="Digite o código ou produto">
+                    <button id="btn-buscar-manual">Buscar</button>
+                    <div id="mensagem"></div>
+
+                    <div class="filter-section" style="margin-top:12px;">
+                        <label for="filtro">🔍 Filtrar por status:</label>
+                        <select id="filtro">
+                            <option value="todos">Todos</option>
+                            <option value="ok">OK</option>
+                            <option value="faltando">Faltando</option>
+                            <option value="sobrando">Sobrando</option>
+                        </select>
+
+                        <div class="status-legend">
+                            <div class="status-pill">
+                                <span class="status-dot dot-ok"></span> OK (conferido = esperado)
+                            </div>
+                            <div class="status-pill">
+                                <span class="status-dot dot-faltando"></span> Faltando (conferido &lt; esperado)
+                            </div>
+                            <div class="status-pill">
+                                <span class="status-dot dot-sobrando"></span> Sobrando (conferido &gt; esperado)
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tabela -->
+            <section style="margin-top:20px;">
+                <div class="card-section">
+                    <div class="card-header">
+                        <h2><span class="icon">📦</span> Produtos</h2>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Descrição</th>
+                                    <th>Esperado</th>
+                                    <th>Conferido</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela-produtos">
+                                {% for codigo, info in produtos.items() %}
+                                    {% set classe = 'linha-ok' if info.quant_conferida == info.quant_esperada else ('linha-faltando' if info.quant_conferida < info.quant_esperada else 'linha-sobrando') %}
+                                    <tr id="linha-{{ codigo }}" class="{{ classe }}">
+                                        <td>{{ info.produto }}</td>
+                                        <td>{{ info.descricao }}</td>
+                                        <td>{{ info.quant_esperada }}</td>
+                                        <td class="conferido">{{ info.quant_conferida }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Relatórios / Apagar -->
+            <section style="margin-top:18px;">
+                <div class="card-section">
+                    <div class="card-header">
+                        <h2><span class="icon">📄</span> Relatórios & Ações</h2>
+                    </div>
+                    <p class="card-subtitle">
+                        Gere o relatório da conferência atual ou limpe todos os dados para começar novamente.
+                    </p>
+
+                    <div class="dropdown" id="dropdown-relatorio">
+                        <button class="dropbtn" id="btn-relatorio">📄 Gerar relatório</button>
+                        <div class="dropdown-content">
+                            <a href="/relatorio?tipo=completo">Relatório completo</a>
+                            <a href="/relatorio?tipo=faltas">Relatório faltas</a>
+                            <a href="/relatorio?tipo=sobras">Relatório sobras</a>
+                            <a href="/relatorio?tipo=sobras_faltas">Relatório sobras e faltas</a>
+                        </div>
+                    </div>
+
+                    <button id="btn-apagar" class="botao-apagar">🗑️ Apagar conferência</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+<script>
+function atualizarTabela(codigo, produto) {
+    const linha = document.getElementById(`linha-${codigo}`);
+    if (linha) {
+        const celulas = linha.getElementsByTagName('td');
+        celulas[3].innerText = produto.quant_conferida;
+        if (produto.quant_conferida == produto.quant_esperada) {
+            linha.className = 'linha-ok';
+        } else if (produto.quant_conferida < produto.quant_esperada) {
+            linha.className = 'linha-faltando';
+        } else {
+            linha.className = 'linha-sobrando';
+        }
+    }
+}
+
+function mostrarMensagem(descricao, codigo, quantidadeDigitada, ok) {
+    const msg = document.getElementById('mensagem');
+    msg.textContent = `✅ ${descricao}\n📦 Código: ${codigo}\n🔢 Conferido agora: ${quantidadeDigitada}`;
+    msg.style.color = ok ? 'lime' : 'red';
+}
+
+function enviarCodigo(codigo, quantidade = null) {
+    if (quantidade === null) {
+        fetch('/bipar', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ codigo: codigo })
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.status === 'ok') {
+                atualizarTabela(codigo, data.produto);
+                mostrarMensagem(data.produto.descricao, codigo, 1, true);
+            } else {
+                mostrarMensagem(`Erro: ${data.mensagem}`, "", "", false);
+            }
+            document.getElementById('codigo-manual').value = '';
+        });
+    } else {
+        fetch('/bipar_manual', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ produto: codigo, quantidade: quantidade })
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.status === 'ok') {
+                atualizarTabela(data.codigo_barra, data.produto);
+                mostrarMensagem(data.produto.descricao, data.codigo_barra, quantidade, true);
+            } else {
+                mostrarMensagem(`Erro: ${data.mensagem}`, "", "", false);
+            }
+            document.getElementById('codigo-manual').value = '';
+        });
+    }
+}
+
+document.getElementById('btn-buscar-manual').addEventListener('click', () => {
+    const codigo = document.getElementById('codigo-manual').value.trim();
+    if (codigo) {
+        const quantidade = prompt("Digite a quantidade (ou deixe vazio para 1):");
+        if (quantidade && !isNaN(quantidade)) {
+            enviarCodigo(codigo, parseInt(quantidade));
+        } else {
+            enviarCodigo(codigo);
+        }
+    }
+});
+
+document.getElementById('codigo-manual').addEventListener('keypress', e => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        const codigo = e.target.value.trim();
+        if (codigo) {
+            const quantidade = prompt("Digite a quantidade (ou deixe vazio para 1):");
+            if (quantidade && !isNaN(quantidade)) {
+                enviarCodigo(codigo, parseInt(quantidade));
+            } else {
+                enviarCodigo(codigo);
+            }
+        }
+    }
+});
+
+document.getElementById('btn-apagar').addEventListener('click', () => {
+    if (confirm('⚠️ Apagar toda conferência?')) {
+        fetch('/apagar', { method: 'POST' })
+        .then(r => r.json())
+        .then(data => {
+            if (data.status === 'ok') location.reload();
+        });
+    }
+});
+
+document.getElementById('filtro').addEventListener('change', function () {
+    const valor = this.value;
+    document.querySelectorAll('#tabela-produtos tr').forEach(linha => {
+        linha.style.display = (valor === 'todos' || linha.classList.contains('linha-' + valor)) ? '' : 'none';
+    });
+});
+
+/* Dropdown relatório: abre no hover (CSS) e também no clique/toque */
+const dropdown = document.getElementById('dropdown-relatorio');
+const btnRelatorio = document.getElementById('btn-relatorio');
+
+btnRelatorio.addEventListener('click', function (e) {
+    e.preventDefault();
+    dropdown.classList.toggle('open');
+});
+
+// Fecha o dropdown se clicar fora (mobile/desktop)
+document.addEventListener('click', function (e) {
+    if (!dropdown.contains(e.target) && dropdown.classList.contains('open')) {
+        dropdown.classList.remove('open');
+    }
+});
+</script>
+</body>
+</html>

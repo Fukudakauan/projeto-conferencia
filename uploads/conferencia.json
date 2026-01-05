@@ -1,0 +1,1346 @@
+{
+    "7890010222171": {
+        "descricao": "KIT MERENDA ESC 3PCAS",
+        "quant_esperada": 21,
+        "quant_conferida": 0,
+        "produto": "22217"
+    },
+    "7890010290675": {
+        "descricao": "BANDEJA EMPIL/7L",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "29067"
+    },
+    "7890010331439": {
+        "descricao": "LIXEIRA QUADRADA 3,75L",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "33143"
+    },
+    "7890010331491": {
+        "descricao": "POTE RED ALTO 6,0L",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "33149"
+    },
+    "7890010368220": {
+        "descricao": "ORGANIZ.RED.5,7L",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "36822"
+    },
+    "7890010379318": {
+        "descricao": "CONJ.4COPOS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "37931"
+    },
+    "7890010823552": {
+        "descricao": "COLEIRA DUPLA N4",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "82355"
+    },
+    "7890010823569": {
+        "descricao": "COLEIRA DUPLA N5",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "82356"
+    },
+    "7890010823576": {
+        "descricao": "COLEIRA DUPLA N06",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "82357"
+    },
+    "7890010823590": {
+        "descricao": "COLEIRA N02",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "82359"
+    },
+    "7890010823606": {
+        "descricao": "COLEIRA N03",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "82360"
+    },
+    "7890010823613": {
+        "descricao": "COLEIRA N04",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "82361"
+    },
+    "7890010823651": {
+        "descricao": "COLEIRA N02",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "82365"
+    },
+    "7890010953662": {
+        "descricao": "CJ. 3 BACIAS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "95366"
+    },
+    "7890010996720": {
+        "descricao": "MANTA SORT.",
+        "quant_esperada": 60,
+        "quant_conferida": 0,
+        "produto": "99672"
+    },
+    "7890010999257": {
+        "descricao": "TAPETE",
+        "quant_esperada": 40,
+        "quant_conferida": 0,
+        "produto": "99925"
+    },
+    "7890011009429": {
+        "descricao": "BONE TRAD.",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "100942"
+    },
+    "7890011045328": {
+        "descricao": "COLEIRA N04",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "104532"
+    },
+    "7890011045335": {
+        "descricao": "CALEIRA N05",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "104533"
+    },
+    "7890011059950": {
+        "descricao": "CHINELO FEM.ESPLENDIDA",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "105995"
+    },
+    "7890011067955": {
+        "descricao": "CHINELO WINNER",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "106795"
+    },
+    "7890011074977": {
+        "descricao": "ORG.COLUNA C/TRAVA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107497"
+    },
+    "7908880406444": {
+        "descricao": "TOALHA P/LIMP.",
+        "quant_esperada": 60,
+        "quant_conferida": 0,
+        "produto": "107829"
+    },
+    "7890011078531": {
+        "descricao": "CANUDO DE ACO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107853"
+    },
+    "7890010208441": {
+        "descricao": "PANO DE ALGODAO COM BARRADO",
+        "quant_esperada": 10,
+        "quant_conferida": 0,
+        "produto": "20844"
+    },
+    "7890010208458": {
+        "descricao": "PANO DE ALGODAO P/BORDAR",
+        "quant_esperada": 10,
+        "quant_conferida": 0,
+        "produto": "20845"
+    },
+    "7890010337165": {
+        "descricao": "JARRA 2000ML",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "33716"
+    },
+    "7890010337189": {
+        "descricao": "RECIPI P/AGUA.2000ML",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "33718"
+    },
+    "7890010558997": {
+        "descricao": "DIFUSOR AROMAS",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "55899"
+    },
+    "7890010694404": {
+        "descricao": "COPO SHAKE 500ML",
+        "quant_esperada": 15,
+        "quant_conferida": 0,
+        "produto": "69440"
+    },
+    "7890010720554": {
+        "descricao": "PORTA FRIOS",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "72055"
+    },
+    "7890010779187": {
+        "descricao": "DIFUSOR AROMAS",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "77918"
+    },
+    "7890010779194": {
+        "descricao": "DIFUSOR AROMAS",
+        "quant_esperada": 12,
+        "quant_conferida": 22,
+        "produto": "77919"
+    },
+    "7890010779217": {
+        "descricao": "DIFUSOR AROMAS",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "77921"
+    },
+    "7890010779224": {
+        "descricao": "DIFUSOR AROMAS",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "77922"
+    },
+    "7890010779231": {
+        "descricao": "DIFUSOR AROMAS",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "77923"
+    },
+    "7890010779248": {
+        "descricao": "DIFUSOR AROMAS",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "77924"
+    },
+    "7890010853696": {
+        "descricao": "AVENTAL",
+        "quant_esperada": 20,
+        "quant_conferida": 0,
+        "produto": "85369"
+    },
+    "7890010926895": {
+        "descricao": "DIV. LIV. P/ EXP.: MINHAS PRIM. CORES",
+        "quant_esperada": 80,
+        "quant_conferida": 0,
+        "produto": "92689"
+    },
+    "7890010965139": {
+        "descricao": "PANO DE ALG.",
+        "quant_esperada": 40,
+        "quant_conferida": 0,
+        "produto": "96513"
+    },
+    "7890010965238": {
+        "descricao": "PANO DE ALG.",
+        "quant_esperada": 20,
+        "quant_conferida": 0,
+        "produto": "96523"
+    },
+    "7890010965252": {
+        "descricao": "TOALHA DE CHA",
+        "quant_esperada": 30,
+        "quant_conferida": 0,
+        "produto": "96525"
+    },
+    "7890010996584": {
+        "descricao": "PANO DE COPA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "99658"
+    },
+    "7890011018483": {
+        "descricao": "CORRENTE 74CM",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "101848"
+    },
+    "7890011018506": {
+        "descricao": "SUPORTE VASO N3",
+        "quant_esperada": 30,
+        "quant_conferida": 0,
+        "produto": "101850"
+    },
+    "7890011018513": {
+        "descricao": "SUPORTE VASO N0",
+        "quant_esperada": 30,
+        "quant_conferida": 0,
+        "produto": "101851"
+    },
+    "7890011026877": {
+        "descricao": "COPO MINNIE",
+        "quant_esperada": 15,
+        "quant_conferida": 0,
+        "produto": "102687"
+    },
+    "7890011028468": {
+        "descricao": "PANO DE COPA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "102846"
+    },
+    "7890011028536": {
+        "descricao": "PANO DE COPA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102853"
+    },
+    "7890011028567": {
+        "descricao": "PANO DE COPA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "102856"
+    },
+    "7890011035565": {
+        "descricao": "COLA (BASTAO)",
+        "quant_esperada": 20,
+        "quant_conferida": 0,
+        "produto": "103556"
+    },
+    "7890011068464": {
+        "descricao": "PANO DE COPA PRIMORE",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "106846"
+    },
+    "7890011068471": {
+        "descricao": "PANO DE COPA FIORI",
+        "quant_esperada": 30,
+        "quant_conferida": 0,
+        "produto": "106847"
+    },
+    "7890011077541": {
+        "descricao": "POTE C/TRAVA",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "107754"
+    },
+    "7890011077558": {
+        "descricao": "POTE C/TRAVA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107755"
+    },
+    "7890011080442": {
+        "descricao": "CNJ.ORG 3PC",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108044"
+    },
+    "7890011080862": {
+        "descricao": "CORRENTES 54CM",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "108086"
+    },
+    "7890011080886": {
+        "descricao": "SUPORTE P/VASO N2",
+        "quant_esperada": 30,
+        "quant_conferida": 0,
+        "produto": "108088"
+    },
+    "7890011081166": {
+        "descricao": "DEO.ANT.ABOVE",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108116"
+    },
+    "7890011081746": {
+        "descricao": "TOALHA DE VISITA",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "108174"
+    },
+    "7890010695326": {
+        "descricao": "PO TRANSLUCIDO",
+        "quant_esperada": 16,
+        "quant_conferida": 0,
+        "produto": "69532"
+    },
+    "7890010695333": {
+        "descricao": "PO ULTRAFINO",
+        "quant_esperada": 16,
+        "quant_conferida": 0,
+        "produto": "69533"
+    },
+    "7890010794159": {
+        "descricao": "TOALHAS UMED.P/PELE",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "79415"
+    },
+    "7890010856642": {
+        "descricao": "TOALHAS UMED.LIMP.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "85664"
+    },
+    "7890010882153": {
+        "descricao": "MORANGUINHO LIP BALM",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "88215"
+    },
+    "7890010926390": {
+        "descricao": "TATTO P/ SOBRANC.",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "92639"
+    },
+    "7890010942840": {
+        "descricao": "BASE LIQ.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "94284"
+    },
+    "7890010978207": {
+        "descricao": "GLOSS SORVETINHO",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "97820"
+    },
+    "7890010982457": {
+        "descricao": "BLOCO DE ANOTACOES",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "98245"
+    },
+    "7890010993156": {
+        "descricao": "BRUMA GLOW",
+        "quant_esperada": 30,
+        "quant_conferida": 0,
+        "produto": "99315"
+    },
+    "7908880400411": {
+        "descricao": "MORDEDOR",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "100876"
+    },
+    "7908880400459": {
+        "descricao": "TAPETE",
+        "quant_esperada": 100,
+        "quant_conferida": 0,
+        "produto": "100880"
+    },
+    "7908880400961": {
+        "descricao": "PAPEL DE PAREDE",
+        "quant_esperada": 200,
+        "quant_conferida": 0,
+        "produto": "101068"
+    },
+    "7908880401050": {
+        "descricao": "MORDEDOR PET",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "101259"
+    },
+    "7908880401098": {
+        "descricao": "COMEDOURO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "101263"
+    },
+    "7890011016564": {
+        "descricao": "BRUMA",
+        "quant_esperada": 30,
+        "quant_conferida": 0,
+        "produto": "101656"
+    },
+    "7908880401463": {
+        "descricao": "POTE",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "101782"
+    },
+    "7908880401739": {
+        "descricao": "ARTIGO P/COSTURA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "101809"
+    },
+    "7890011020820": {
+        "descricao": "BATEDOR DE OVOS",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "102082"
+    },
+    "7908880402361": {
+        "descricao": "GANCHO DE PLAS.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102446"
+    },
+    "7890011027386": {
+        "descricao": "JG 10 GELOS ART.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102738"
+    },
+    "7890011028642": {
+        "descricao": "CORTADOR DE UNHA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "102864"
+    },
+    "7890011030225": {
+        "descricao": "BLOCO DE ANOT.",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "103022"
+    },
+    "7890011036494": {
+        "descricao": "MARCA TEXTO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "103649"
+    },
+    "7908880402989": {
+        "descricao": "ESPONJA P/APLIC.",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "104186"
+    },
+    "7890011051046": {
+        "descricao": "CORTADOR DE UNHA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "105104"
+    },
+    "7890011056119": {
+        "descricao": "LIP GLOSS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "105611"
+    },
+    "7890011056126": {
+        "descricao": "BALM BEACH",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "105612"
+    },
+    "7908880404556": {
+        "descricao": "COMEDOURO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "106308"
+    },
+    "7908880404709": {
+        "descricao": "COMEDOURO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "106312"
+    },
+    "7908880404686": {
+        "descricao": "COMEDOURO",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "106315"
+    },
+    "7908880405119": {
+        "descricao": "CNJ 5 UTEN.P/COZINHA",
+        "quant_esperada": 72,
+        "quant_conferida": 0,
+        "produto": "106976"
+    },
+    "7908880405157": {
+        "descricao": "CNJ 6 COPOS",
+        "quant_esperada": 384,
+        "quant_conferida": 0,
+        "produto": "106981"
+    },
+    "7890011069980": {
+        "descricao": "MASC.P/CILIOS",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "106998"
+    },
+    "7908880405492": {
+        "descricao": "PORTA ESCOVA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107305"
+    },
+    "7908880405508": {
+        "descricao": "COMEDOURO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107306"
+    },
+    "7908880405539": {
+        "descricao": "ORG.DE REMEDIOS",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "107309"
+    },
+    "7908880405645": {
+        "descricao": "ESPONJA P/APLICACAO",
+        "quant_esperada": 10,
+        "quant_conferida": 0,
+        "produto": "107320"
+    },
+    "7908880405652": {
+        "descricao": "CNJ 10 ESPONJAS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107321"
+    },
+    "7908880405782": {
+        "descricao": "CNJ 6 PENTES",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107334"
+    },
+    "7890011074663": {
+        "descricao": "MASCARA DE CILIOS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107466"
+    },
+    "7908880405805": {
+        "descricao": "CNJ.UTEN.DE PLAST.",
+        "quant_esperada": 10,
+        "quant_conferida": 0,
+        "produto": "107546"
+    },
+    "7908880405812": {
+        "descricao": "CNJ DE PRENDEDORES",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107547"
+    },
+    "7908880405829": {
+        "descricao": "MORDEDOR PET",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107549"
+    },
+    "7890011077619": {
+        "descricao": "DISPENSADOR P/DET.",
+        "quant_esperada": 18,
+        "quant_conferida": 0,
+        "produto": "107761"
+    },
+    "7890011080619": {
+        "descricao": "PO COMPACTO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108061"
+    },
+    "7890011080626": {
+        "descricao": "ESTOJO DE SOMBRAS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108062"
+    },
+    "7890011080633": {
+        "descricao": "ESTOJO DE SOMBRAS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108063"
+    },
+    "7890011080640": {
+        "descricao": "LIP GLOSS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108064"
+    },
+    "7890011080657": {
+        "descricao": "CUTE GLOSS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108065"
+    },
+    "7890011080664": {
+        "descricao": "BASE PINK",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "108066"
+    },
+    "7890011080671": {
+        "descricao": "GLOSS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108067"
+    },
+    "7890011080749": {
+        "descricao": "BATOM LIQ.GOLD",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108074"
+    },
+    "7890011080817": {
+        "descricao": "PO COMPACTO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108081"
+    },
+    "7890011080824": {
+        "descricao": "PO COMPACTO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "108082"
+    },
+    "7890011017011": {
+        "descricao": "CANECA MELHOR PAI",
+        "quant_esperada": 144,
+        "quant_conferida": 0,
+        "produto": "101701"
+    },
+    "7890011017028": {
+        "descricao": "CANECA PAI",
+        "quant_esperada": 144,
+        "quant_conferida": 0,
+        "produto": "101702"
+    },
+    "7890011026679": {
+        "descricao": "REFIL SAB.LIQ.500ML",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102667"
+    },
+    "7890011026686": {
+        "descricao": "REFIL SAB.LIQ.500ML",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "102668"
+    },
+    "7890011026693": {
+        "descricao": "REFIL SAB.LIQ 500ML",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "102669"
+    },
+    "7890011026709": {
+        "descricao": "REFIL SAB.LIQ 500ML",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "102670"
+    },
+    "7890011026723": {
+        "descricao": "REFIL SAB.LIQ.500ML",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102672"
+    },
+    "7890011026730": {
+        "descricao": "REFIL SAB.LIQ.500ML",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102673"
+    },
+    "7890011026747": {
+        "descricao": "REFIL SAB.LIQ.500ML",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102674"
+    },
+    "7890010568439": {
+        "descricao": "TOP",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "56843"
+    },
+    "7890010662090": {
+        "descricao": "FORMA P/PICOLE",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "66209"
+    },
+    "7890010744321": {
+        "descricao": "ANIMAIS SELV.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "74432"
+    },
+    "7890010745724": {
+        "descricao": "KIT POTE RET.",
+        "quant_esperada": 20,
+        "quant_conferida": 0,
+        "produto": "74572"
+    },
+    "7890010843406": {
+        "descricao": "TOALHA LAVABO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "84340"
+    },
+    "7890010852040": {
+        "descricao": "MISTURADOR DE BEBIDA",
+        "quant_esperada": 72,
+        "quant_conferida": 0,
+        "produto": "85204"
+    },
+    "7890010865309": {
+        "descricao": "CALCINHA FIO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "86530"
+    },
+    "7890010865330": {
+        "descricao": "TANGA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "86533"
+    },
+    "7890010865354": {
+        "descricao": "CALCINHA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "86535"
+    },
+    "7890010891100": {
+        "descricao": "KIT COPO COLOR",
+        "quant_esperada": 10,
+        "quant_conferida": 0,
+        "produto": "89110"
+    },
+    "7890010916698": {
+        "descricao": "CHAPEU DE PALHA",
+        "quant_esperada": 150,
+        "quant_conferida": 0,
+        "produto": "91669"
+    },
+    "7890010935873": {
+        "descricao": "REFIL ALMOF.",
+        "quant_esperada": 60,
+        "quant_conferida": 0,
+        "produto": "93587"
+    },
+    "7890010952412": {
+        "descricao": "FIO DENTAL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "95241"
+    },
+    "7890010959688": {
+        "descricao": "KIT MOTO  DE DEDO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "95968"
+    },
+    "7890010959718": {
+        "descricao": "MINI SHOPPING",
+        "quant_esperada": 18,
+        "quant_conferida": 0,
+        "produto": "95971"
+    },
+    "7890010971963": {
+        "descricao": "PISTA COM LANCADOR",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "97196"
+    },
+    "7908880400374": {
+        "descricao": "PULVERIZADOR",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "100871"
+    },
+    "7908880400770": {
+        "descricao": "SACOLA P/PRES.",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "101074"
+    },
+    "7890011012498": {
+        "descricao": "POTE RET.",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "101249"
+    },
+    "7908880401135": {
+        "descricao": "MORDEDOR PET",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "101267"
+    },
+    "7908880401180": {
+        "descricao": "COLEIRA PET",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "101272"
+    },
+    "7908880401524": {
+        "descricao": "MEIA INF.",
+        "quant_esperada": 20,
+        "quant_conferida": 0,
+        "produto": "101788"
+    },
+    "7908880401548": {
+        "descricao": "MEIA INF.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "101790"
+    },
+    "7908880401555": {
+        "descricao": "MEIA INF.",
+        "quant_esperada": 20,
+        "quant_conferida": 0,
+        "produto": "101791"
+    },
+    "7908880401562": {
+        "descricao": "MEIA INF.",
+        "quant_esperada": 32,
+        "quant_conferida": 0,
+        "produto": "101792"
+    },
+    "7908880401593": {
+        "descricao": "MEIAS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "101795"
+    },
+    "7908880401654": {
+        "descricao": "MEIA INF.",
+        "quant_esperada": 20,
+        "quant_conferida": 0,
+        "produto": "101801"
+    },
+    "7890011020493": {
+        "descricao": "PISTA COM LANCADOR",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102049"
+    },
+    "7908880402378": {
+        "descricao": "KIT GANCHO 3 PEC",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102448"
+    },
+    "7908880402446": {
+        "descricao": "KIT GANCHO 4 PEC",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "102450"
+    },
+    "7890011025993": {
+        "descricao": "FRASCO P/SABONETE",
+        "quant_esperada": 60,
+        "quant_conferida": 0,
+        "produto": "102599"
+    },
+    "7890011027454": {
+        "descricao": "PORTA RETRATO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "102745"
+    },
+    "7890011034407": {
+        "descricao": "CARTELA DE ADESIVO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "103440"
+    },
+    "7890011037538": {
+        "descricao": "CARTELA ADESIVO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "103753"
+    },
+    "7890011038597": {
+        "descricao": "ESPETO DUPLO",
+        "quant_esperada": 60,
+        "quant_conferida": 0,
+        "produto": "103859"
+    },
+    "7890011041672": {
+        "descricao": "CALCINHA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "104167"
+    },
+    "7890011048596": {
+        "descricao": "POTE CONICO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "104859"
+    },
+    "7890011050674": {
+        "descricao": "FRASCO ESPUMADOR",
+        "quant_esperada": 96,
+        "quant_conferida": 0,
+        "produto": "105067"
+    },
+    "7890011052517": {
+        "descricao": "CJ 5 REFIL P/PISTOLA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "105251"
+    },
+    "7890011053538": {
+        "descricao": "ETIQUETAS ADESIV.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "105353"
+    },
+    "7890011053651": {
+        "descricao": "TOALHA DE ROSTO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "105365"
+    },
+    "7890011053668": {
+        "descricao": "TOALHA DE ROSTO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "105366"
+    },
+    "7890011054542": {
+        "descricao": "CARTELA DE ADESIVO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "105454"
+    },
+    "7890011054634": {
+        "descricao": "ESTOJO PORTA OBJ.",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "105463"
+    },
+    "7890011054894": {
+        "descricao": "PORTA DOCUMENTOS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "105489"
+    },
+    "7890011056652": {
+        "descricao": "POTE SPINLOCK",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "105665"
+    },
+    "7890011056768": {
+        "descricao": "VASO RED.",
+        "quant_esperada": 48,
+        "quant_conferida": 48,
+        "produto": "105676"
+    },
+    "7908880403832": {
+        "descricao": "CNJ DE MEIAS",
+        "quant_esperada": 40,
+        "quant_conferida": 0,
+        "produto": "106086"
+    },
+    "7908880403818": {
+        "descricao": "CNJ DE MEIAS",
+        "quant_esperada": 40,
+        "quant_conferida": 0,
+        "produto": "106087"
+    },
+    "7908880403771": {
+        "descricao": "CNJ DE MEIAS",
+        "quant_esperada": 40,
+        "quant_conferida": 0,
+        "produto": "106090"
+    },
+    "7908880404228": {
+        "descricao": "CHAPEU POLIESTER 3735 CM",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "106159"
+    },
+    "7908880404648": {
+        "descricao": "GUIA P/ANIMAIS",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "106309"
+    },
+    "7908880404600": {
+        "descricao": "COLEIRA POLI.",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "106318"
+    },
+    "7890011065869": {
+        "descricao": "BLOCO ADESIVO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "106586"
+    },
+    "7890011065876": {
+        "descricao": "BLOCO ADESIVO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "106587"
+    },
+    "7890011065883": {
+        "descricao": "BLOCO ADESIVO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "106588"
+    },
+    "7908880404853": {
+        "descricao": "COLEIRA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "106903"
+    },
+    "7890011072225": {
+        "descricao": "ACENDEDOR P/FOGAO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107222"
+    },
+    "7890011072829": {
+        "descricao": "TELEFONE MUSICAL",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107282"
+    },
+    "7908880405515": {
+        "descricao": "MEIAFEM. ADULTO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107307"
+    },
+    "7908880405546": {
+        "descricao": "SACOLA DE PAPEL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107310"
+    },
+    "7908880405560": {
+        "descricao": "SACOLA DE PAPEL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107312"
+    },
+    "7908880405577": {
+        "descricao": "SACOLA DE PAPEL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107313"
+    },
+    "7908880405584": {
+        "descricao": "SACOLA DE PAPEL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107314"
+    },
+    "7908880405591": {
+        "descricao": "SACOLA DE PAPEL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107315"
+    },
+    "7908880405607": {
+        "descricao": "SACOLA DE PAPEL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107316"
+    },
+    "7908880405614": {
+        "descricao": "SACOLA DE PAPEL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107317"
+    },
+    "7908880405621": {
+        "descricao": "SACOLA DE PAPEL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107318"
+    },
+    "7908880405638": {
+        "descricao": "SACOLA DE PAPEL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107319"
+    },
+    "7890011074687": {
+        "descricao": "KIT MICANGAS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107468"
+    },
+    "7908880405935": {
+        "descricao": "TOUCA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107560"
+    },
+    "7908880406000": {
+        "descricao": "TOUCA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107567"
+    },
+    "7908880406017": {
+        "descricao": "CNJ PINCEL",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "107568"
+    },
+    "7908880406109": {
+        "descricao": "CNJ DE UTENSIL.",
+        "quant_esperada": 48,
+        "quant_conferida": 0,
+        "produto": "107577"
+    },
+    "7908880406116": {
+        "descricao": "CNJ DE UTENSIL.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107578"
+    },
+    "7890011076520": {
+        "descricao": "POTE RETANG.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107652"
+    },
+    "7890011076551": {
+        "descricao": "PO SOLTO CHOCOLATE",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107655"
+    },
+    "7890011076568": {
+        "descricao": "PO SOLTO ROSA MUSQUETA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107656"
+    },
+    "7908880406239": {
+        "descricao": "MEIAS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107808"
+    },
+    "7908880406246": {
+        "descricao": "MEIAS",
+        "quant_esperada": 20,
+        "quant_conferida": 0,
+        "produto": "107809"
+    },
+    "7908880406260": {
+        "descricao": "MEIAS",
+        "quant_esperada": 20,
+        "quant_conferida": 0,
+        "produto": "107811"
+    },
+    "7908880406307": {
+        "descricao": "LUVAS",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107815"
+    },
+    "7908880406451": {
+        "descricao": "TOALHA P/LIMP.",
+        "quant_esperada": 36,
+        "quant_conferida": 96,
+        "produto": "107830"
+    },
+    "7908880406598": {
+        "descricao": "GANCHO DE METAL",
+        "quant_esperada": 30,
+        "quant_conferida": 0,
+        "produto": "107844"
+    },
+    "7890011078548": {
+        "descricao": "KIT INFANTIL",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107854"
+    },
+    "7890011078586": {
+        "descricao": "COPO TRANS",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "107858"
+    },
+    "7890011078609": {
+        "descricao": "FACA P/PAO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107860"
+    },
+    "7890011078616": {
+        "descricao": "FORMA DE GELO",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107861"
+    },
+    "7890011078623": {
+        "descricao": "GALHETEIRO C/2 PC",
+        "quant_esperada": 72,
+        "quant_conferida": 0,
+        "produto": "107862"
+    },
+    "7890011078630": {
+        "descricao": "MIXER DE ALIMENTOS",
+        "quant_esperada": 72,
+        "quant_conferida": 0,
+        "produto": "107863"
+    },
+    "7890011078647": {
+        "descricao": "PINCEL DE SILI.",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107864"
+    },
+    "7890011078654": {
+        "descricao": "TABUA DE MADEIRA",
+        "quant_esperada": 24,
+        "quant_conferida": 0,
+        "produto": "107865"
+    },
+    "7890011079668": {
+        "descricao": "PORTA RETRATO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107966"
+    },
+    "7890011079675": {
+        "descricao": "PORTA RETRATO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107967"
+    },
+    "7890011079682": {
+        "descricao": "PORTA RETRATO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107968"
+    },
+    "7890011079705": {
+        "descricao": "PORTA RETRATO",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107970"
+    },
+    "7890011079934": {
+        "descricao": "CALCINHA",
+        "quant_esperada": 12,
+        "quant_conferida": 0,
+        "produto": "107993"
+    },
+    "7890011081128": {
+        "descricao": "ESFOLIANTE CAPIM LIMAO",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "108112"
+    },
+    "7890011081135": {
+        "descricao": "ESFOLIANTE MORANGO",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "108113"
+    },
+    "7890011081142": {
+        "descricao": "ESFOLIANTE UVA",
+        "quant_esperada": 36,
+        "quant_conferida": 0,
+        "produto": "108114"
+    }
+}

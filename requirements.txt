@@ -1,0 +1,7 @@
+Flask
+gunicorn
+pandas
+openpyxl
+PyPDF2
+reportlab
+psycopg2-binary

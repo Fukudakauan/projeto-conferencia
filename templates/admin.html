@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Administrador</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-main: radial-gradient(circle at top, #111827 0%, #020617 40%, #000 100%);
+            --card-bg: rgba(15, 23, 42, 0.9);
+            --card-border: rgba(148, 163, 184, 0.3);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #00d1ff;
+            --accent-2: #3b82f6;
+            --accent-soft: rgba(56, 189, 248, 0.12);
+            --field-bg: rgba(30, 41, 59, .92);
+            --field-border: rgba(100, 116, 139, 0.6);
+            --delete: #ef4444;
+            --delete-hover: #dc2626;
+            --radius-card: 22px;
+            --radius-inner: 14px;
+            --shadow-card: 0 26px 60px rgba(0,0,0,0.85);
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 28px 16px;
+            color: var(--text-main);
+            background: var(--bg-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bg-decor {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .glow-1, .glow-2 {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 999px;
+            filter: blur(120px);
+            opacity: 0.26;
+        }
+
+        .glow-1 {
+            top: -90px;
+            right: -60px;
+            background: #00d1ff;
+        }
+
+        .glow-2 {
+            bottom: -130px;
+            left: -40px;
+            background: #2563eb;
+        }
+
+        .shell {
+            width: 100%;
+            max-width: 880px;
+        }
+
+        .container {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
+            border-radius: var(--radius-card);
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow-card);
+            backdrop-filter: blur(26px);
+            -webkit-backdrop-filter: blur(26px);
+            padding: 28px 26px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 60%);
+            opacity: 0.9;
+        }
+
+        .container-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .admin-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+
+        .admin-title-group {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 16px;
+            background:
+                radial-gradient(circle at 25% 0%, #ffffff 0%, rgba(248, 250, 252, 0.55) 14%, transparent 36%),
+                conic-gradient(from 210deg, #0ea5e9, #22c1c3, #38bdf8, #0ea5e9);
+            padding: 2px;
+            box-shadow:
+                0 10px 26px rgba(15,23,42,0.9),
+                0 0 22px rgba(56,189,248,0.65);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-mark span {
+            width: 100%;
+            height: 100%;
+            border-radius: 13px;
+            background: radial-gradient(circle at top, #020617, #020617 60%, #020617 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 17px;
+            letter-spacing: 0.06em;
+            color: var(--accent);
+        }
+
+        .admin-title-text h2 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .admin-title-text p {
+            margin: 2px 0 0;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .badge-mode {
+            padding: 6px 11px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.4);
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        .link-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.4);
+            background: rgba(15,23,42,0.9);
+            color: var(--text-muted);
+            font-size: 13px;
+            text-decoration: none;
+            transition: 0.18s;
+        }
+
+        .link-back:hover {
+            color: var(--accent);
+            border-color: rgba(56,189,248,0.7);
+        }
+
+        .link-back span {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .divider {
+            margin: 10px 0 20px;
+            height: 1px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, transparent, rgba(148,163,184,0.5), transparent);
+            opacity: 0.7;
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 24px 20px 20px;
+                border-radius: 18px;
+            }
+        }
+
+        .card-section {
+            background: rgba(15, 23, 42, 0.88);
+            border-radius: var(--radius-inner);
+            border: 1px solid rgba(148,163,184,0.35);
+            padding: 18px 18px 16px;
+        }
+
+        .card-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .card-section-header h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .card-section-header span {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        .card-section p.helper {
+            margin: 0 0 10px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Form */
+        form {
+            margin: 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            margin-top: 10px;
+            border-radius: 12px;
+            background: var(--field-bg);
+            border: 1px solid var(--field-border);
+            color: var(--text-main);
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        input::placeholder {
+            color: #6b7280;
+        }
+
+        input:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 209, 255, 0.35);
+            background: #020617;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 16px;
+            border: none;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #020617;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.13em;
+            transition: 0.2s;
+            box-shadow: 0 12px 30px rgba(0, 209, 255, 0.3);
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 18px 40px rgba(0, 209, 255, 0.55);
+        }
+
+        /* Lista de lojas */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            background: rgba(15,23,42,0.95);
+            padding: 12px 14px;
+            border-radius: 12px;
+            margin-bottom: 9px;
+            border: 1px solid rgba(148,163,184,0.3);
+            transition: 0.18s;
+        }
+
+        li:hover {
+            background: rgba(30, 41, 59, 0.98);
+            border-color: rgba(56,189,248,0.55);
+        }
+
+        .store-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .store-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .store-meta {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .store-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: rgba(15,23,42,0.9);
+            border: 1px solid rgba(148,163,184,0.4);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+        }
+
+        .store-tag-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
+
+        .inline {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .btn-excluir {
+            padding: 7px 11px;
+            font-size: 12px;
+            border-radius: 999px;
+            border: none;
+            background: var(--delete);
+            color: white;
+            cursor: pointer;
+            transition: 0.18s;
+        }
+
+        .btn-excluir:hover {
+            background: var(--delete-hover);
+            transform: translateY(-1px);
+        }
+
+        .empty-state {
+            font-size: 12px;
+            color: var(--text-muted);
+            padding: 12px;
+            border-radius: 10px;
+            background: rgba(15,23,42,0.9);
+            border: 1px dashed rgba(148,163,184,0.4);
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-decor">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+    </div>
+
+    <div class="shell">
+        <div class="container">
+            <div class="container-inner">
+
+                <header class="admin-header">
+                    <div class="admin-title-group">
+                        <div class="logo-mark">
+                            <span>AD</span>
+                        </div>
+                        <div class="admin-title-text">
+                            <h2>Painel do Administrador</h2>
+                            <p>Gerencie as lojas que terão acesso à Conferência de Produtos.</p>
+                        </div>
+                    </div>
+
+                    <div class="admin-actions">
+                        <div class="badge-mode">Modo administrador</div>
+                        <a href="/login" class="link-back">
+                            <span>←</span> Login
+                        </a>
+                    </div>
+                </header>
+
+                <div class="divider"></div>
+
+                <div class="layout-grid">
+                    <!-- Coluna cadastro -->
+                    <section class="card-section">
+                        <div class="card-section-header">
+                            <h3>Cadastrar nova loja</h3>
+                            <span>Cadastro</span>
+                        </div>
+                        <p class="helper">
+                            Defina o nome da loja e a senha de acesso à área de conferência.
+                        </p>
+
+                        <form method="POST" action="/admin/cadastrar">
+                            <input type="text" name="usuario" placeholder="Nome da loja" required>
+                            <input type="password" name="senha" placeholder="Senha da loja" required>
+                            <button type="submit">Cadastrar loja</button>
+                        </form>
+                    </section>
+
+                    <!-- Coluna lista -->
+                    <section class="card-section">
+                        <div class="card-section-header">
+                            <h3>Lojas cadastradas</h3>
+                            <span>Lista</span>
+                        </div>
+                        <p class="helper">
+                            Visualize e remova acessos de lojas quando necessário.
+                        </p>
+
+                        <ul>
+                            {% if lojas %}
+                                {% for id, nome in lojas %}
+                                <li>
+                                    <div class="store-info">
+                                        <span class="store-name">{{ nome }}</span>
+                                        <span class="store-meta">Acesso ativo à plataforma</span>
+                                    </div>
+
+                                    <div>
+                                        <div class="store-tag">
+                                            <span class="store-tag-dot"></span>
+                                            LOJA
+                                        </div>
+                                        <form method="POST" action="/admin/deletar" class="inline">
+                                            <input type="hidden" name="id" value="{{ id }}">
+                                            <button type="submit" class="btn-excluir">Excluir</button>
+                                        </form>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            {% else %}
+                                <div class="empty-state">
+                                    Nenhuma loja cadastrada ainda. Utilize o formulário ao lado para criar o primeiro acesso.
+                                </div>
+                            {% endif %}
+                        </ul>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

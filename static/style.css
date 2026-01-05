@@ -1,0 +1,141 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1e1e2f;
+    color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+    background: #2a2a40;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos */
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* Botões */
+button {
+    background: #4c8bf5;
+    color: white;
+    border: none;
+    padding: 14px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #3166d3;
+}
+
+/* Inputs */
+input[type="file"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #1e1e2f;
+    color: #f1f1f1;
+}
+
+/* Leitor */
+#reader {
+    margin-top: 15px;
+    border: 1px dashed #555;
+    border-radius: 8px;
+    padding: 10px;
+    background: #23233a;
+}
+
+/* Mensagem */
+#mensagem {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #7dd87d;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #2f2f47;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+table thead {
+    background-color: #383860;
+    color: #fff;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Cores dos status */
+.linha-ok {
+    background-color: #355e3b;
+    /* verde escuro */
+}
+
+.linha-faltando {
+    background-color: #5a1e2e;
+    /* vermelho escuro */
+}
+
+.linha-sobrando {
+    background-color: #665c1e;
+    /* amarelo escuro */
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+
+    h1,
+    h2,
+    h3 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
