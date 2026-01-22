@@ -139,20 +139,40 @@ def importar_arquivo(caminho_arquivo, loja_id):
         if not isinstance(txt, str):
             txt = str(txt) if txt is not None else ""
         txt = txt.strip().lower()
-        txt = ''.join(c for c in unicodedata.normalize('NFD', txt) if unicodedata.category(c) != 'Mn')
+        txt = ''.join(
+            c for c in unicodedata.normalize('NFD', txt)
+            if unicodedata.category(c) != 'Mn'
+        )
         txt = re.sub(r'\s+', ' ', txt)
         return txt
 
     def _only_digits(s):
-        return re.sub(r'\D', '', str(s or '').strip())
+        if s is None:
+            return ""
+        s = str(s).strip()
+
+        # remove .0 do excel
+        if s.endswith(".0"):
+            s = s[:-2]
+
+        # trata notação científica (ex: 7.89123E+12)
+        if "e" in s.lower():
+            try:
+                s = f"{int(float(s))}"
+            except:
+                pass
+
+        return re.sub(r"\D", "", s)
 
     def detectar_colunas(df):
         cols = list(df.columns)
         norm_map = {_norm(c): c for c in cols}
         norm_cols = list(norm_map.keys())
 
-        keys_ean  = ['ean','gtin','barra','barcode','codbarra','codigo de barras','cod de barras','cod barra','codbarras','cod bar','ean13','gtin14','gtin-14']
-        keys_prod = ['produto','prod','ref','referencia','codigo','cod','cod prod','cod produto','codinterno','codigo interno']
+        keys_ean  = ['ean','gtin','barra','barcode','codbarra','codigo de barras','cod de barras',
+                     'cod barra','codbarras','cod bar','ean13','gtin14','gtin-14']
+        keys_prod = ['produto','prod','ref','referencia','codigo','cod','cod prod','cod produto',
+                     'codinterno','codigo interno']
         keys_desc = ['descricao','descr','produto descricao','nome','item']
         keys_qtd  = ['quant','qtd','qtde','quantidade']
 
@@ -163,10 +183,10 @@ def importar_arquivo(caminho_arquivo, loja_id):
                         return norm_map[nc]
             return None
 
-        ean_col  = pick(keys_ean)
-        prod_col = pick(keys_prod, avoid=_norm(ean_col) if ean_col else None)
-        desc_col = pick(keys_desc)
-        quant_col= pick(keys_qtd)
+        ean_col   = pick(keys_ean)
+        prod_col  = pick(keys_prod, avoid=_norm(ean_col) if ean_col else None)
+        desc_col  = pick(keys_desc)
+        quant_col = pick(keys_qtd)
         return ean_col, prod_col, desc_col, quant_col
 
     ext = caminho_arquivo.lower().split('.')[-1]
@@ -174,14 +194,15 @@ def importar_arquivo(caminho_arquivo, loja_id):
     df = None
 
     try:
+        # ====== LEITURA ======
         if ext in ['xlsx', 'xls']:
-            df = pd.read_excel(caminho_arquivo)
+            df = pd.read_excel(caminho_arquivo, dtype=str)
 
         elif ext == 'csv':
             tried = []
             for enc, sep in [('utf-8',';'), ('utf-8',','), ('latin-1',';'), ('latin-1',',')]:
                 try:
-                    df = pd.read_csv(caminho_arquivo, encoding=enc, sep=sep)
+                    df = pd.read_csv(caminho_arquivo, encoding=enc, sep=sep, dtype=str)
                     break
                 except Exception as e:
                     tried.append(f"{enc}/{sep}: {e}")
@@ -201,11 +222,11 @@ def importar_arquivo(caminho_arquivo, loja_id):
 
                 ean_val = _only_digits(cEAN)
                 if ean_val and cEAN.strip().upper() != 'SEM GTIN':
-                    codigo = ean_val
+                    codigo = ean_val              # EAN
                 else:
                     codigo = cProd.strip() or f"AUTOXML{idx}"
 
-                produto_ref = cProd.strip() or codigo
+                produto_ref = cProd.strip() or codigo  # ref curta
                 try:
                     quantidade = int(float(qCom.replace(',', '.')))
                 except:
@@ -240,32 +261,43 @@ def importar_arquivo(caminho_arquivo, loja_id):
         else:
             return f"Formato {ext} não é suportado."
 
+        # ====== TRATAMENTO DO DF (XLSX/CSV) ======
         if df is not None:
             ean_col, prod_col, desc_col, quant_col = detectar_colunas(df)
             if not quant_col or not (ean_col or prod_col):
                 return f"Erro: não encontrei colunas de quantidade e de código. Colunas disponíveis: {list(df.columns)}"
 
             for i, row in df.iterrows():
-                codigo = None
-                if ean_col and pd.notna(row[ean_col]):
-                    codigo = _only_digits(row[ean_col]) or None
-                if not codigo and prod_col and pd.notna(row[prod_col]):
-                    codigo = str(row[prod_col]).strip()
+                codigo = None        # EAN (barras)
+                produto_ref = None   # código curto
 
-                if prod_col and pd.notna(row[prod_col]):
-                    produto_ref = str(row[prod_col]).strip()
-                else:
-                    produto_ref = codigo or f"AUTO{i}"
+                if ean_col and pd.notna(row.get(ean_col)):
+                    codigo = _only_digits(row.get(ean_col)) or None
 
-                descricao = str(row[desc_col]).strip() if desc_col and pd.notna(row[desc_col]) else "SEM DESCRIÇÃO"
+                if prod_col and pd.notna(row.get(prod_col)):
+                    produto_ref = str(row.get(prod_col)).strip()
+
+                # se não tiver nenhum dos dois
+                if not codigo and not produto_ref:
+                    produto_ref = f"AUTO{i}"
+                    codigo = produto_ref
+
+                # se não tiver EAN, usa ref como codigo também
+                if not codigo and produto_ref:
+                    codigo = produto_ref
+
+                descricao = "SEM DESCRIÇÃO"
+                if desc_col and pd.notna(row.get(desc_col)):
+                    descricao = str(row.get(desc_col)).strip()
+
                 try:
-                    quantidade = int(float(str(row[quant_col]).replace(',', '.')))
+                    quantidade = int(float(str(row.get(quant_col)).replace(',', '.')))
                 except:
                     quantidade = 0
 
-                dados_importados.append((codigo, descricao, quantidade, produto_ref))
+                dados_importados.append((codigo, descricao, quantidade, produto_ref or codigo))
 
-        # Consolidação
+        # ====== CONSOLIDAÇÃO ======
         produtos_unicos = {}
         for codigo, descricao, quantidade, produto_ref in dados_importados:
             key = (codigo or produto_ref or "").strip()
@@ -279,9 +311,12 @@ def importar_arquivo(caminho_arquivo, loja_id):
                     'produto': (produto_ref or codigo or "").strip()
                 }
 
-        dados_finais = [(p['codigo'], p['descricao'], p['quantidade'], p['produto']) for p in produtos_unicos.values()]
+        dados_finais = [
+            (p['codigo'], p['descricao'], p['quantidade'], p['produto'])
+            for p in produtos_unicos.values()
+        ]
 
-        # Salvar no banco
+        # ====== SALVAR NO BANCO ======
         conn = get_conn()
         c = conn.cursor()
         P = ph()
